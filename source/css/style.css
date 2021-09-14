@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  background-image:url("https://i.pinimg.com/originals/b6/3e/6a/b63e6a702d0d5dd3a0cfb5ce3bb6505b.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.container{
+  display: flex;
+  height: 100%;
+  align-items:center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  height: 300px;
+  margin: 20px;
+  perspective: 900px;
+}
+
+.card .flip {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .flip {
+  transform: translate(30px, 15px)
+}
+
+.card1 {
+  transform: rotate(-15deg);
+}
+
+.card2 {
+  transform: rotate(-5deg);
+}
+
+.card4 {
+  transform: rotate(5deg);
+}
+
+.card5 {
+  transform: rotate(10deg); 
+}
+
+.front-card, .back-card {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.back-card {
+  transform: rotateY(180deg);
+}
+
+.front-card img, .back-card img {
+  border-radius: 12px;
+}
