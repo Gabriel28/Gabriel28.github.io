@@ -13,16 +13,17 @@ html, body{
 
 .container{
   display: flex;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
   height: 100%;
-  align-items:center;
-  justify-content: center;
+  align-items: inline-block;
 }
 
 .card {
   position: relative;
-  width: 150px;
-  height: 300px;
-  margin: 20px;
+  width: 400px;
+  height: 600px;
+  margin: 35px;
   perspective: 900px;
 }
 
@@ -32,23 +33,7 @@ html, body{
 }
 
 .card:hover .flip {
-  transform: translate(30px, 15px)
-}
-
-.card1 {
-  transform: rotate(-15deg);
-}
-
-.card2 {
-  transform: rotate(-5deg);
-}
-
-.card4 {
-  transform: rotate(5deg);
-}
-
-.card5 {
-  transform: rotate(10deg); 
+  transform: rotateY(180deg);
 }
 
 .front-card, .back-card {
@@ -60,6 +45,7 @@ html, body{
   transform: rotateY(180deg);
 }
 
-.front-card img, .back-card img {
+.front-card img, .back-card img{
   border-radius: 12px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0, 0.3)
 }
